@@ -18,6 +18,7 @@ class CreateEmpresasTable extends Migration
             $table->string("nome");
             $table->string("cnpj", 14)->unique();
             $table->string("endereco");
+            $table->timestamps();
         });
     }
 

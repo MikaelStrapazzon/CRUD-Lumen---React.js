@@ -20,6 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string("telefone", 11)->nullable()->unique();
             $table->date("data_nascimento")->nullable();
             $table->string("cidade_nascimento")->nullable();
+            $table->timestamps();
         });
     }
 

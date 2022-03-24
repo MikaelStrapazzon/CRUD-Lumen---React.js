@@ -16,6 +16,7 @@ class CreateEmpresaUsuarioTable extends Migration
         Schema::create('empresa_usuario', function (Blueprint $table) {
             $table->foreignId('usuario_id')->constrained();
             $table->foreignId('empresa_id')->constrained();
+            $table->timestamps();
         });
     }
 
