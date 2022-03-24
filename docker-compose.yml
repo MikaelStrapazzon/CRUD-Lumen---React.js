@@ -11,7 +11,7 @@ services:
     volumes:
       - ./backend:/app
     environment:
-      WEB_DOCUMENT_INDEX: public/index.php
+      WEB_DOCUMENT_ROOT: /app/public
     links:
       - database
 
