@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "6f8d5b9c-ab06-45f9-b3ce-cdba50ef5ea2",
+		"name": "CRUD-Lumen-React.js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Retorna Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/usuario/4",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"usuario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna Todas Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Linguine",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "q@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "telefone",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data_nascimento",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cidade_nascimento",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "empresas[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "empresas[]",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4500/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/usuario/14",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"usuario",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Altera Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "empresas[]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "empresas[]",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4500/usuario/12",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"usuario",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Retorna Empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/empresa/4",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"empresa",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna Todas Empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/empresa",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/empresa?nome=Marcios autobo22&cnpj=61688431000187&endereco=123",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"empresa"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Marcios autobo22"
+								},
+								{
+									"key": "cnpj",
+									"value": "61688431000187"
+								},
+								{
+									"key": "endereco",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Empresa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/empresa/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"empresa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Altera Empresa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:4500/empresa/4?nome=Padaria Maia&cnpj=57640887000108",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"empresa",
+								"4"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Padaria Maia"
+								},
+								{
+									"key": "cnpj",
+									"value": "57640887000108"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
