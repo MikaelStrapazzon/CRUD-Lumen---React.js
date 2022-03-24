@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
+    height: fit-content;
     min-height: 560px;
     width: min(80%, 1120px);
 
@@ -10,7 +11,7 @@ export const Container = styled.main`
     justify-content: flex-start;
 
     padding: 25px;
-    margin: auto;
+    margin: 50px auto;
 
     background-color: var(--cinza);
     border-radius: 0.25rem;
