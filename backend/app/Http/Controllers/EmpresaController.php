@@ -8,11 +8,18 @@ use Illuminate\Http\Request;
 class EmpresaController extends Controller
 {
     public function retornaEmpresa($id) {
-        return response()->json(Empresa::find($id));
+        $empresa = Empresa::find($id);
+        $empresa->usuarios = $empresa->usuarios()->get();
+        return response()->json($empresa);
     }
 
     public function retornaTodasEmpresa() {
-        return response()->json(Empresa::all());
+        $empresas = Empresa::all();
+        foreach( $empresas as $empresa ) {
+            $empresa->usuarios = $empresa->usuarios()->get();
+        }
+
+        return response()->json($empresas);
     }
 
     public function criaEmpresa(Request $requisicao) {
@@ -32,7 +39,9 @@ class EmpresaController extends Controller
     }
 
     public function deletaEmpresa($id) {
-        Empresa::find($id)->delete();
+        $empresa = Empresa::find($id);
+        $empresa->usuarios()->detach();
+        $empresa->delete();
     }
 
     public function atualizaEmpresa($id, Request $requisicao) {
