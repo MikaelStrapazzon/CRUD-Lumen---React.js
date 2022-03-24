@@ -3,6 +3,11 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
+    :root {
+        --background: #F0F2F5;
+        --cinza: #bbb;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -39,5 +44,12 @@ export const GlobalStyle = createGlobalStyle`
     [disabled] {
         opacity: 0.6;
         cursor: not-allowed;
+    }
+
+    #root {
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
     }
 `
