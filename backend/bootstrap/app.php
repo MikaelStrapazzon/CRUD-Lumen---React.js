@@ -24,6 +24,7 @@ $app = new Laravel\Lumen\Application(
 );
 
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+$app->register(LaravelLegends\PtBrValidator\ValidatorProvider::class);
 
 $app->withFacades();
 $app->withEloquent();
