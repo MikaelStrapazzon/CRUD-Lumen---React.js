@@ -18,7 +18,7 @@ class EmpresaController extends Controller
     public function criaEmpresa(Request $requisicao) {
         $this->validate($requisicao, [
             'nome' => 'required|min:3|max:255',
-            'cnpj' => 'required|cnpj|unique:empresas|size:14',
+            'cnpj' => 'required|cnpj|size:14|unique:empresas',
             'endereco' => 'required|min:3|max:255'
         ]);
 
@@ -38,7 +38,7 @@ class EmpresaController extends Controller
     public function atualizaEmpresa($id, Request $requisicao) {
         $this->validate($requisicao, [
             'nome' => 'min:3|max:255',
-            'cnpj' => 'cnpj|size:14|unique:empresas,' . $id,
+            'cnpj' => 'cnpj|size:14|unique:empresas,cnpj,' . $id,
             'endereco' => 'min:3|max:255'
         ]);
 
